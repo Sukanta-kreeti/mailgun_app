@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= yield :title %> | Mailgun</title>
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <%= stylesheet_link_tag params[:controller] if stylesheet_exists?(params[:controller]) %>
+    <%= javascript_include_tag params[:controller] if javascript_exists?(params[:controller]) %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <%= render partial: 'layouts/header' %>
+      <%= render partial: 'layouts/side_menu' %>
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <div class="row">
+            <%= render partial: 'shared/flash_messages' %>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>

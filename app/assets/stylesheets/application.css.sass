@@ -1,0 +1,275 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require jquery-ui/tabs
+ *= require_self
+ */
+
+@import "font-awesome"
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+
+.modal
+  display:    none
+  position:   fixed
+  z-index:    1000
+  top:        0
+  left:       0
+  height:     100%
+  width:      100%
+  background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat
+
+body.loading
+  overflow: hidden
+
+body.loading .modal
+  display: block
+
+
+body
+  font-family: 'Open Sans', sans-serif
+
+.navbar-header
+  float: left
+  width: 100%
+
+.width-100
+  width: 100%
+
+.align-left
+  float: left
+
+.height-min
+  min-height: 100px
+
+#wrapper
+  width: 100%
+  margin-top: 50px
+
+#page-wrapper
+  padding: 15px 15px
+  min-height: 600px
+  background: #F3F3F3
+
+#page-inner
+  width: 100%
+  margin: 10px 20px 10px 0px
+  background-color: #fff !important
+  padding: 10px
+  min-height: 1200px
+
+.text-center
+  text-align: center
+
+.user-image-back
+  background-color: #8B7BFF
+
+h5, .h5
+  font-size: 14px
+  font-weight: 900
+  text-transform: uppercase
+  padding-bottom: 20px
+
+.navbar-inverse .navbar-nav > li > a
+  color: #06F
+  &:hover, &:focus
+    color: #06F
+
+.arrow
+  float: right
+
+.fa.arrow:before
+  content: "\f104"
+
+.active > a > .fa.arrow:before
+  content: "\f107"
+
+.nav-second-level li, .nav-third-level li
+  border-bottom: none !important
+
+.nav-second-level li a
+  padding-left: 37px
+
+.nav-third-level li a
+  padding-left: 55px
+
+.sidebar-collapse
+  background: none
+  .nav
+    background: none
+    padding: 0
+    > li > a
+      background: #FFFFFF
+      text-shadow: none
+      color: #0000FF
+    > li > a
+      &:hover, &:focus
+        background: #F3F3F3
+        outline: 0
+  > .nav > li
+    > a
+      padding: 15px 10px
+    border-bottom: 1px solid rgba(240, 240, 240, 1) !important
+
+.nav-second-level > li:last-child > a:after
+  height: 50%
+
+.nav-third-level > li
+  &:last-child > a:after
+    height: 50%
+  > a
+    &:after, &:before
+      left: 40px
+
+.navbar-side
+  border: none
+  background-color: #202020
+
+.navbar-inverse
+  background-color: #f3f3f3
+  border-color: #D3D3D3
+
+.navbar-default
+  border: 0px solid #DDDDDD
+  .navbar-toggle
+    &:hover, &:focus
+      background-color: #B40101
+    border-color: #fff
+    .icon-bar
+      background-color: #FFF
+
+.nav > li > a > i
+  margin-right: 10px
+
+.navbar-inverse
+  .navbar-brand
+    color: #000000
+    font-size: 25px
+    font-weight: 900
+    &:hover, &:focus
+      color: #000000
+      font-size: 25px
+      font-weight: 900
+  .navbar-toggle
+    border-color: #8B7BFF
+    &:hover, &:focus
+      background-color: #8B7BFF
+
+.adjust-nav
+  padding-left: 20px
+  padding-right: 20px
+
+.navbar-toggle
+  background-color: #8B7BFF
+
+.bg-color-blue
+  background-color: #9A86EB
+  color: #fff
+
+.no-boder
+  border: 1px solid #f3f3f3
+
+.back-footer-blue
+  background-color: #7479E6
+  border-top: 0px solid #fff
+
+.nav-tabs > li > a
+  -webkit-border-radius: 0px 0px 0px 0px
+  -moz-border-radius: 0px 0px 0px 0px
+  border-radius: 0px 0px 0px 0px
+
+.panel-group .panel, .panel
+  border-radius: 0px
+  -webkit-border-radius: 0px
+  -moz-border-radius: 0px
+
+.panel-heading
+  border-top-left-radius: 0px
+  border-top-right-radius: 0px
+
+.btn, .progress
+  border-radius: 0px
+  -webkit-border-radius: 0px
+  -moz-border-radius: 0px
+
+
+/*footer */
+
+footer
+  margin-top: 45px
+  padding-top: 5px
+  border-top: 1px solid #eaeaea
+  color: #777
+
+footer a
+  color: #555
+
+footer a:hover
+  color: #222
+
+footer small
+  float: left
+
+footer ul
+  float: right
+  list-style: none
+
+footer ul li
+  float: left
+  margin-left: 15px
+
+/* form */
+input, textarea, select, .uneditable-input
+  border: 1px solid #bbb
+  width: 100%
+  margin-bottom: 15px
+
+input
+  height: auto !important
+
+h1
+  text-align: center
+
+#error_explanation
+  color: red
+  ul
+    color: red
+    margin: 0 0 30px 0
+
+.field_with_errors
+  @extend .has-error
+  .form-control
+    color: $state-danger-text
+
+.checkbox
+  margin-top: -10px
+  margin-bottom: 10px
+  span
+    margin-left: 20px
+    font-weight: normal
+
+#session_remember_me
+  width: auto
+  margin-left: 0
+
+@media (min-width: 768px)
+  #page-wrapper
+    margin: 0 0 0 260px
+    padding: 15px 30px
+    min-height: 1200px
+  .navbar-side
+    z-index: 1
+    position: absolute
+    width: 260px
+  .navbar
+    border-radius: 0px

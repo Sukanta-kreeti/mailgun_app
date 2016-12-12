@@ -1,0 +1,2 @@
+<h1>Welcome <%= @user.name %>,</h1>
+<p>Please activate your account by clicking this <%= edit_account_activation_url(token: @token, email: @user.email) %></p>

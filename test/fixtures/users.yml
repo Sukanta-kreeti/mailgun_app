@@ -1,0 +1,11 @@
+sukanta:
+  name: Sukanta Example
+  email: sukanta@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.now %>
+
+michael:
+  name: Sukanta Example
+  email: sukanta2@example.com
+  password_digest: <%= User.digest('password') %>
